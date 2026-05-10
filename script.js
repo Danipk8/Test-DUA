@@ -269,6 +269,39 @@ function showResults() {
         results.innerHTML = `
             <h3>Perfil de aprendizaje identificado: ${username}</h3>
             
+
+
+            <h4>Según tus respuestas:</h4>
+
+<div class="result-card">
+    <h4>REPRESENTACIÓN</h4>
+    <p><strong>Recibes mejor la información mediante:</strong></p>
+    <div class="response-list">
+        ${responses.representacion.map(r => `<div class="response-item">${r}</div>`).join("")}
+    </div>
+</div>
+
+<div class="result-card">
+    <h4>ACCIÓN Y EXPRESIÓN</h4>
+    <p><strong>Expresas mejor lo aprendido cuando:</strong></p>
+    <div class="response-list">
+        ${responses.accion.map(r => `<div class="response-item">${r}</div>`).join("")}
+    </div>
+</div>
+
+<div class="result-card">
+    <h4>COMPROMISO</h4>
+    <p><strong>Te motivas más cuando:</strong></p>
+    <div class="response-list">
+        ${responses.compromiso.map(r => `<div class="response-item">${r}</div>`).join("")}
+    </div>
+</div>
+
+
+
+            <hr>
+
+
             <div class="metric">
 
                 <span>REPRESENTACIÓN</span>
@@ -308,18 +341,8 @@ function showResults() {
                 
             </div>
             
-            <hr>
 
-            <h4>Según tus respuestas:</h4>
 
-            <p><strong>1. Recibes mejor la información mediante:</strong><br>
-            ${responses.representacion.join("<br>")}</p>
-
-            <p><strong>2. Expresas mejor lo aprendido cuando:</strong><br>
-            ${responses.accion.join("<br>")}</p>
-
-            <p><strong>3. Te motivas más cuando:</strong><br>
-            ${responses.compromiso.join("<br>")}</p>
         `;
 
     }, 2500);
