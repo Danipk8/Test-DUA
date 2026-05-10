@@ -205,6 +205,41 @@ hr {
 }
 
 
+.result-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,255,255,0.25);
+    border-radius: 18px;
+    padding: 20px;
+    margin: 25px 0;
+    box-shadow: 0 0 18px rgba(0,255,255,0.15);
+}
+
+
+
+.result-card h4 {
+    color: #b366ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px #b366ff;
+}
+
+
+.response-list {
+    margin-top: 15px;
+}
+
+
+
+.response-item {
+    background: rgba(0,255,255,0.08);
+    border-left: 4px solid #00ffff;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+
+
+
 
 
 /*MOdificar barras de rmedicion de resultados */
