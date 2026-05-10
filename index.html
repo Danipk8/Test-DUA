@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Adaptativo DUA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="container">
+
+        <div id="start-screen" class="panel active">
+            <h1>SISTEMA DE APRENDIZAJE ADAPTATIVO</h1>
+
+            <p><span><strong>USUARIO:</strong></span></p> 
+
+            <input type="text" id="username" placeholder="Ingresa tu nombre">     
+
+
+            <p><span><strong>ESTADO:</strong></span> Análisis pendiente</p>
+            <p><span><strong>OBJETIVO</strong>:</span> Identificar ruta óptima de aprendizaje</p>
+
+            <button id="startBtn">INICIAR DIAGNÓSTICO</button>
+        </div>
+
+        <div id="quiz-screen" class="panel hidden">
+
+      <!-- barra -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+      <!-- categoria -->
+    
+          <div id="question-category"></div>
+
+
+      <!-- objetivo -->
+    
+ 
+            <h2 id="question-title"></h2>
+
+
+    <!-- Texto extra objetivo -->
+            <p id="question-objective"></p>
+
+
+
+            
+
+    <!-- opciones -->
+            <div id="options-container"></div>
+
+    <!-- boton -->
+            <button id="nextBtn">CONFIRMAR SELECCIÓN</button>
+
+
+        </div>
+
+        <div id="loading-screen" class="panel hidden"> 
+            
+        <h2 id="loading-text">ANALIZANDO...</h2>
+
+
+            <div class="scan-bar"></div> 
+        </div>
+
+        <div id="result-screen" class="panel hidden">
+            <h2>ANÁLISIS COMPLETADO</h2>
+            <div id="results"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
