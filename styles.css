@@ -1,0 +1,329 @@
+
+/*contenedores reutilizables para color
+:root {
+    --purple-dark: #72348B;
+    --purple-deep: #652580;
+    --cyan-soft: #46BBC3;
+    --blue-tech: #169CD8;
+    --pink-accent: #E4067E;
+}
+
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.background-grid {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/*Estetica preguntas y botones*/
+
+.panel {
+    background: rgba(0, 58, 92, 0.445);
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 25px #00ffff;
+    padding: 40px;
+    width: 700px;
+    border-radius: 20px;
+    text-align: center;
+    
+    transition: all 0.8s ease;
+
+
+max-height: 85vh;
+overflow-y: auto;
+
+}
+
+/*Desactivar pantallas para despues al presionar boton verlas */
+.hidden {
+    display: none;
+}
+
+h1{
+    color: #ecf9fd;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+ h2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #000000;
+}
+
+span {
+    color: #00ccff;
+    text-shadow: 0 0 10px #000000;
+}
+
+
+
+/*entrada*/
+input[type="text"] {
+    width: 50%;
+    padding: 5px;
+    margin: 1px 0;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #00ffff;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0,255,255,0.4);
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 20px #00ffff;
+}
+
+
+
+
+
+
+button {
+    background:#00d9ff59;
+    border: 2px solid #00ffff;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+
+
+    font-size: 16px;
+
+  border: 2px solid #00e1ff;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+    transition: 0.3s;
+}
+
+
+
+
+button:hover {
+    background: #00ffff;
+    color: black;
+      transform: scale(1.05);
+  box-shadow: 0 0 20px #00e1ff;
+}
+
+.option {
+    font-size: 20px;
+    display: block;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #055cff;
+    border-radius: 10px;
+    cursor: pointer;
+    color:#ecf9fd
+}
+
+.option:hover {
+    background: rgba(0, 81, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00e1ff;
+}
+
+
+#question-objective {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-style: italic;
+
+
+        text-shadow: 0 0 10px #000000;
+}
+
+
+
+#question-category {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #b366ff;
+    border-radius: 20px;
+    color: #b366ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #b366ff;
+    box-shadow: 0 0 15px rgba(179,102,255,0.3);
+}
+
+
+
+
+/* Estetica resultados*/
+
+
+#results {
+
+    text-align: left;
+    margin-top: 20px;
+}
+
+#results h3, #results h4 {
+    color: #00ffff;
+    font-size: 20px
+    
+}
+
+#results p {
+    font-size: 20px;
+
+    margin: 15px 0;
+    line-height: 1.6;
+    
+}
+
+hr {
+    border: 1px solid rgba(0,255,255,0.3);
+}
+
+
+
+
+/*MOdificar barras de rmedicion de resultados */
+.metric {
+    margin: 25px 0;
+}
+
+.metric span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.metric-bar {
+    width: 100%;
+    height: 22px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,255,255,0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00ffff, #b366ff);
+    box-shadow: 0 0 18px #00ffff;
+    border-radius: 15px;
+    transition: width 1.2s ease;
+    position: relative;
+}
+
+
+.fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    background: rgba(255,255,255,0.35);
+    animation: shine 2s infinite;
+}
+
+
+@keyframes shine {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 130%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*barra de progreso */
+
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    transition: width 0.6s ease;
+}
+
+
+
+
+/*Crea una barra luminosa que recorre.*/
+.scan-bar {
+    width: 100%;
+    height: 14px;
+    background: rgba(255,255,255,0.08);
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+
+
+.scan-bar::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background: #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    from {
+        left: -30%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
